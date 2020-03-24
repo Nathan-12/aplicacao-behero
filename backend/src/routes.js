@@ -1,23 +1,19 @@
 const express = require('express');
+const routes = express.Router();
 
-const app = express();
-
-app.use(express.json());
-
-app.post('/users', (request, response) => {
+routes.post('/users', (request, response) => {
     //const paramsQuery = request.query;
     //const paramsRoute = request.params;
-    const body = request.body;
+    //const body = request.body;
 
     //console.log('paramsQuery: ', paramsQuery);
     //console.log('paramsRoute: ', paramsRoute);
-    console.log('body: ', body);
+    //console.log('body: ', body);
 
     return response.json({
-        evento: 'Aplicação BeHero',
-        dev: 'Nathan'
+        evento: 'Aplicação BeTheHero',
+        dev: 'Nathan Lima'
     })
 });
 
-app.listen(3333);
-
+module.exports = routes;
